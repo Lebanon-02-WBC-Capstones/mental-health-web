@@ -8,13 +8,11 @@ function App() {
     return (
       <div>
         <NavBar mode="user"/>
-        <Launcher
+        <Launcher style={{}}
         agentProfile={{
-          teamName: "Chat Room",
+          teamName: "Global Chat Room",
           imageUrl: "https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png"
         }}
-        onMessageWasSent={"send a message"}
-        messageList={[{author: "hehe",type: "text",data: {text: "blabla"}}]} showEmoji
       />
       </div>
     );
