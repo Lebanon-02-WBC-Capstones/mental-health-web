@@ -1,0 +1,85 @@
+.card {
+  background-color: white;
+  float: left;
+  width: 100%;
+  padding: 0 10px;
+  color: #272727;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0px;
+  border-color: tomato;
+  border-style: solid;
+  transition: 200ms;
+  max-width: 380px;
+}
+
+.connect-btn {
+  background-color: rgb(17, 128, 128);
+  border-radius: 10px;
+  border: none;
+  color: white;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+
+  cursor: pointer;
+  margin-left: 22px;
+  padding: 9px;
+}
+
+.info-btn {
+  margin-right: 44px;
+  margin-left: 15px;
+  padding: 9px;
+  background-color: rgb(17, 128, 128);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+
+  cursor: pointer;
+}
+.card:hover {
+  transition: 200ms;
+  border: 3px;
+  border-color: tomato;
+  border-style: solid;
+}
+
+.card-header {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.card-title-group {
+  justify-content: center;
+}
+
+.card-title {
+  flex: 0.5;
+  font-size: large;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.card-image {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 102%;
+}
+
+.card-text {
+  width: 350px;
+  font-size: medium;
+}

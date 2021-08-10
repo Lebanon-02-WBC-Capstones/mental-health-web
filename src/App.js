@@ -1,4 +1,5 @@
 import "./App.css";
+import Card from "./components/Card";
 import React from "react";
 import LandingPage from "./landingpage.jsx";
 import NavigationBar from "./components/NavigationBar";
@@ -12,6 +13,9 @@ function App() {
       <LandingPage />
       <Blog />
       <Postfeed />;
+      <header className="App-header">
+        <Card />
+      </header>
     </div>
   );
 }
