@@ -1,0 +1,134 @@
+.landing-page{
+   display: flex;
+   flex-direction:row;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   overflow: hidden;
+
+}
+.quote-background{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(17, 128, 128); 
+    display: flex;
+    justify-content: center;
+
+}
+.quote-border{
+    margin: 10px;
+    border: 3px solid white;
+    height: 630px;
+    width: 390px;
+    
+}
+.quote{
+    text-align: center;
+    line-height: 65px;
+    color: white;
+    font-size: 2em;
+    font-family: "Poppins", sans-serif;
+    padding: 10px 70px 50px;
+    
+}
+.quote-author{
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+
+} 
+.landing-image{
+    width: 920px;
+    height: 100%;
+     
+}
+.transparent-backg{
+    position: absolute;
+    background-color: rgba(245, 246, 247, 0.9);
+    top: 10px;
+    left:110px;
+    bottom: 30px;
+    height: 640px;
+    width: 700px; 
+
+} 
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 20px; 
+    padding: 0px; 
+
+}
+.brain-icon{
+    width: 80px;
+    height: 80px;  
+
+}
+.logo{
+    font-family: "Poppins", sans-serif;
+    color: rgb(17, 128, 128);
+    font-size: 28px; 
+
+}
+.centred-text{
+    color: rgb(17, 128, 128);
+    font-size: 40px;
+    line-height: 50px;  
+
+}
+.Work-font{
+    font-family:'Work Sans', sans-serif;
+
+}
+.line{
+
+    width: 350px;
+    height: 5px;
+    background-color: rgb(17, 128, 128);
+    border-radius: 10px;
+
+}
+.join-button{
+    background-color: rgb(17, 128, 128);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family:'Poppins', sans-serif ;
+    margin: 4px 0px;
+    cursor: pointer;
+  
+}
+@media only screen and (max-width: 600px) {
+
+.quote-background{       
+  width: 0px;
+  height:0px;
+        
+} 
+.landing-image{
+  object-fit: cover;
+  object-position: 400% ;
+     
+}
+.transparent-backg{
+  position: absolute;
+  background-color: rgba(245, 246, 247, 0.9);
+  top: 9px;
+  left:40px;
+  bottom: 30px;
+  height: 640px;
+  width: 420px; 
+   
+} 
+
+   
+}
