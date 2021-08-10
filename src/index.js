@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import "./fonts/Exo2-VariableFont_wght.ttf";
 import App from "./App";
 
 ReactDOM.render(

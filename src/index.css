@@ -11,3 +11,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#height {
+  border-radius: 14px;
+  color: blue;
+  padding: 5px 202px;
+  line-height: 55px;
+  width: 44vh;
+}
+.blog {
+  padding: 13px;
+}
+.blogContainer {
+  display: flex;
+  padding: 19px;
+  margin-left: 122px;
+  width: 150vh;
+  border-color: rgb(227, 227, 228);
+  border-style: solid;
+  border-radius: 22px;
+}
+.new_post {
+  background-color: rgba(0, 122, 121, 1);
+}
+
+.List {
+  height: 122px;
+  margin: 30px;
+
+  display: flex;
+  align-items: center;
+  padding: 1.2em;
+  border-radius: 6%;
+  border-style: solid;
+  border-color: rgb(236, 236, 243);
+}
+.postBtn {
+  margin-left: 4px;
+  background-color: rgba(0, 122, 121, 1);
+  color: white;
+}
+
+.navDefault {
+  color: white;
+}
+@font-face {
+  font-family: "Exo2";
+  src: local("Exo2"),
+    url("./fonts/Exo2-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+}
