@@ -25,7 +25,7 @@ function Blogcontainer() {
         <div className="blogContainer">
           <h4>Create post</h4>
           <div>
-            <form className="blog" onClick={clearInput}>
+            <form className="blog" onSubmit={clearInput}>
               <label>
                 <input
                   ref={input}
@@ -45,8 +45,7 @@ function Blogcontainer() {
       {newPostItem.map((item, index) => (
         <div className="postBottomLeft" key={index}>
           <div className="new_post">
-            <p className="List">
-              {" "}
+            <div className="List">
               <div className="postTop">
                 <div className="postTopLeft">
                   <img
@@ -71,7 +70,7 @@ function Blogcontainer() {
                 />
                 {like} people like it
               </span>
-            </p>
+            </div>
           </div>
         </div>
       ))}

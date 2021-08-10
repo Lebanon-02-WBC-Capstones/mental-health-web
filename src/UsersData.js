@@ -27,7 +27,7 @@ export const recipeItem = {
   Specialist: "General Psychiatrist",
 
   description:
-    "loren ipsum as jsa e edad rajsd jasd ahasd adsha sdadad aeklerden biri.  loren ipsum as jsa e edad rajsd jasd ahasd adsha sdadad .",
+    "loren ipsum as jsa e edad rajsd jasd ahasd adsha sdadad aeklerden biri.  loren ipsum as jsa e edad rajsd jasd ahasd adsha sdadad a, ancak bazı vegan enchiladalara da harika bir katkı sağlar.",
 };
 
 export const like = 193;
