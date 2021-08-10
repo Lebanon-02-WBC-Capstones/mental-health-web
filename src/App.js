@@ -2,7 +2,7 @@ import "./App.css";
 import Card from "./components/Card";
 import Blogcontainer from "./components/Blogcontainer";
 import React from "react";
-
+import ContactUs from "./ContactUs";
 // import LandingPage from "./landingpage.jsx";
 import ShrinkCarousel from "./shrinkcarousel";
 import LandingPage from "./landingpage.jsx";
@@ -23,6 +23,7 @@ function App() {
         <Card />
       </header>
       <Blogcontainer />
+      <ContactUs />
     </div>
   );
 }

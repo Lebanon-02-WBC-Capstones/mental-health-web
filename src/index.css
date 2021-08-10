@@ -50,16 +50,6 @@ code {
   margin-left: 55px;
 }
 
-.navDefault {
-  color: white;
-}
-@font-face {
-  font-family: "Exo2";
-  src: local("Exo2"),
-    url("./fonts/Exo2-VariableFont_wght.ttf") format("truetype");
-  font-weight: normal;
-}
-
 .postBtn {
   margin-left: 4px;
   background-color: white;
@@ -84,6 +74,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 33px;
 }
 .List {
   height: 10em;
@@ -116,6 +107,13 @@ span.postLikeCounter {
 .postTop {
   height: -4em;
 }
-.postBottomLeft {
-  padding-top: 33px;
+
+.navDefault {
+  color: white;
+}
+@font-face {
+  font-family: "Exo2";
+  src: local("Exo2"),
+    url("./fonts/Exo2-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
 }
