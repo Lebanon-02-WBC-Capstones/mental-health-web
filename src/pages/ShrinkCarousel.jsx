@@ -1,9 +1,10 @@
-import "./App.css";
-import "./style.css";
-import { Users } from "./data.js";
+import "../App.css";
+import "../style.css";
+import { Users } from "../data.js";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
+import Navbar from "../components/NavigationBar";
 
 function ShrinkCarousel() {
   const usersarray = Users.map((item) => (
@@ -33,12 +34,15 @@ function ShrinkCarousel() {
   ));
 
   return (
-    <div className="carouselpage">
-      <button className="showcards">
-        <b>Show cards</b>
-      </button>
-      <Carousel className="carousel">{usersarray}</Carousel>
-    </div>
+    <>
+      <Navbar mode="user" />
+      <div className="carouselpage">
+        <button className="showcards">
+          <b>Show cards</b>
+        </button>
+        <Carousel className="carousel">{usersarray}</Carousel>
+      </div>
+    </>
   );
 }
 
