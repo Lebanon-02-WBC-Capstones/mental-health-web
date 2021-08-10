@@ -1,7 +1,16 @@
+.cards-container {
+  display: flex;
+  margin-top: 22px;
+}
+.card-container {
+  display: flex;
+  margin-top: 22px;
+}
+
 .card {
   background-color: white;
   float: left;
-  width: 100%;
+  width: 70%;
   padding: 0 10px;
   color: #272727;
   padding: 20px;
@@ -13,51 +22,20 @@
   max-width: 380px;
 }
 
-.connect-btn {
-  background-color: rgb(17, 128, 128);
-  border-radius: 10px;
-  border: none;
-  color: white;
-
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-
-  cursor: pointer;
-  margin-left: 22px;
-  padding: 9px;
-}
-
-.info-btn {
-  margin-right: 44px;
-  margin-left: 15px;
-  padding: 9px;
-  background-color: rgb(17, 128, 128);
-  border-radius: 10px;
-  border: none;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-
-  cursor: pointer;
-}
 .card:hover {
   transition: 200ms;
   border: 3px;
   border-color: tomato;
   border-style: solid;
+  cursor: pointer;
+  margin-left: 22px;
+  padding: 9px;
 }
 
 .card-header {
   display: flex;
   flex-wrap: nowrap;
+  cursor: pointer;
   align-items: center;
 }
 
@@ -80,6 +58,70 @@
 }
 
 .card-text {
-  width: 350px;
+  width: 300px;
   font-size: medium;
+}
+
+.info-btn {
+  margin-right: 44px;
+  margin-left: 15px;
+  padding: 9px;
+  background-color: rgb(17, 128, 128);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.info-btn:hover {
+  background-color: blue;
+}
+
+.connect-btn {
+  background-color: rgb(17, 128, 128);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.connect-btn:hover {
+  background-color: blue;
+}
+
+.btncontainer {
+  margin-top: 22px;
+  margin-left: 1200px;
+}
+
+.switchbtn {
+  background-color: rgb(17, 128, 128);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  margin-left: 22px;
+  padding: 9px;
+}
+
+.switchbtn:hover {
+  background-color: blue;
 }
