@@ -5724,6 +5724,11 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
+goober@^2.0.37:
+  version "2.0.39"
+  resolved "https://registry.yarnpkg.com/goober/-/goober-2.0.39.tgz#0a52bf78ee9562270669e7603f0250f014f37cb1"
+  integrity sha512-ryw0VaZaehKmnjL4ZEJaiUVQc+XFa5dXIAbf2QC3F+WVKRbzaSuJyq7w28bdlwqYctiZ0Ok5QL/Pap5M2pCHQg==
+
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.4:
   version "4.2.6"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.6.tgz#ff040b2b0853b23c3d31027523706f1885d76bee"
@@ -9551,6 +9556,16 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+react-animated-heart@^0.0.7-alpha.1:
+  version "0.0.7-alpha.1"
+  resolved "https://registry.yarnpkg.com/react-animated-heart/-/react-animated-heart-0.0.7-alpha.1.tgz#6d9e8e4b5e712fddbeeb0d2d3df6f8e087a437e7"
+  integrity sha512-xcy5oWOF3rc7dt8K+g7mdMLcyRIlYWleHSI8LLqlKRD2UVFUvhcl+qNS+X36qulMS0b9Nv0+wDgkLFQWjGB7cA==
+  dependencies:
+    goober "^2.0.37"
+    react "^17.0.2"
+    react-dom "^17.0.2"
+    react-scripts "4.0.3"
+
 react-app-polyfill@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-2.0.0.tgz#a0bea50f078b8a082970a9d853dc34b6dcc6a3cf"
@@ -9655,7 +9670,7 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-overlays@^5.0.1:
+react-overlays@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-5.1.1.tgz#2e7cf49744b56537c7828ccb94cfc63dd778ae4f"
   integrity sha512-eCN2s2/+GVZzpnId4XVWtvDPYYBD2EtOGP74hE+8yDskPzFy9+pV1H3ZZihxuRdEbQzzacySaaDkR7xE0ydl4Q==
