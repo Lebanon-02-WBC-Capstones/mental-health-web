@@ -1,5 +1,6 @@
 import "./App.css";
 import Card from "./components/Card";
+import Blogcontainer from "./components/Blogcontainer";
 import React from "react";
 
 // import LandingPage from "./landingpage.jsx";
@@ -21,6 +22,7 @@ function App() {
       <header className="App-header">
         <Card />
       </header>
+      <Blogcontainer />
     </div>
   );
 }
