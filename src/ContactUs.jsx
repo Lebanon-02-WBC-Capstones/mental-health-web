@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./ContactUs.css";
+import "../ContactUs.css";
+import Navbar from "../components/NavigationBar";
 
 function ContactUs() {
   const [firstName, setFirstName] = useState("");
@@ -17,6 +18,7 @@ function ContactUs() {
 
   return (
     <>
+      <Navbar mode="user" />
       <div className="contactHeader">
         <h2>Contact Us</h2>
       </div>
