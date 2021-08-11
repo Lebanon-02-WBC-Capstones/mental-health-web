@@ -1,30 +1,23 @@
 import "./App.css";
-import Card from "./components/Card";
-import Blogcontainer from "./components/Blogcontainer";
 import React from "react";
-import ContactUs from "./ContactUs";
-// import LandingPage from "./landingpage.jsx";
-import ShrinkCarousel from "./shrinkcarousel";
-import LandingPage from "./landingpage.jsx";
-import NavigationBar from "./components/NavigationBar";
-import Blog from "./components/blog";
-import Postfeed from "./components/Postfeed";
+import LandingPage from "./pages/LandingPage.jsx";
+import BlogPage from "./pages/BlogPage";
+import ContactUs from "./pages/ContactUs";
+import ShrinkCarousel from "./pages/ShrinkCarousel";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      {/* <LandingPage/>  */}
-      <ShrinkCarousel />
-      <NavigationBar mode="moderator" />
-      <LandingPage />
-      <Blog />
-      <Postfeed />;
-      <header className="App-header">
-        <Card />
-      </header>
-      <Blogcontainer />
-      <ContactUs />
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/Blog" exact component={BlogPage} />
+          <Route path="/ContactUs" exact component={ContactUs} />
+          <Route path="/ShrinkCarousel" exact component={ShrinkCarousel} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
