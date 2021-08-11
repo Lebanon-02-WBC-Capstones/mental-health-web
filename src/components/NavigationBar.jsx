@@ -1,174 +1,136 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
-import { Navbar, Container, Nav } from "react-bootstrap";
+// import { Navbar, Container, Nav } from "react-bootstrap";
 
 const NavigationBar = (props) => {
-  if (props.mode === "visitor") {
+  if (props.mode == "user") {
     return (
       <>
-        <Navbar style={{ backgroundColor: "#007A79" }}>
-          <Container>
-            <Navbar.Brand
-              href="#home"
-              style={{ color: "white", fontFamily: "Exo2" }}
+        <nav className="bg-green-800 flex items-center justify-between flex-wrap p-6">
+          <div className="flex items-center flex-shrink-0 text-white mr-6">
+            <a
+              className="font-bold text-xl no-underline text-white ml-6"
+              href="#"
             >
               Cerebra
-            </Navbar.Brand>
-            <Nav style={{ textAlign: "right" }}>
-              <Nav.Link href="#book" style={{ color: "white" }}>
+            </a>
+          </div>
+          <div className="flex space-x-24">
+            <div className="space-x-6 mr-50">
+              <a className="text-l text-white no-underline" href="#">
                 Book
-              </Nav.Link>
-              <Nav.Link href="#contactUs" style={{ color: "white" }}>
+              </a>
+              <a className="text-l text-white no-underline" href="#">
                 Contact Us
-              </Nav.Link>
-              <Nav.Link
-                href="#login"
-                style={{ paddingLeft: "100px", color: "white" }}
+              </a>
+            </div>
+            <div className="flex justify-between flex-wrap space-x-6">
+              <a className="text-l text-white no-underline" href="#">
+                Logout
+              </a>
+              <a href="#">
+                <img
+                  src="https://www.kindpng.com/picc/m/699-6998313_ios-bell-outline-comments-white-bell-icon-png.png"
+                  alt="Logo"
+                  className="w-6 rounded-full"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="https://eshendetesia.com/images/user-profile.png"
+                  alt="Logo"
+                  className="w-7 rounded-full"
+                />
+              </a>
+              <a></a>
+            </div>
+          </div>
+        </nav>
+      </>
+    );
+  } else if (props.mode == "visitor") {
+    return (
+      <>
+        <nav className="bg-green-800 flex items-center justify-between flex-wrap p-6">
+          <div className="flex items-center flex-shrink-0 text-white mr-6">
+            <a
+              className="font-bold text-xl no-underline text-white ml-6"
+              href="#"
+            >
+              Cerebra
+            </a>
+          </div>
+          <div className="flex space-x-24">
+            <div className="space-x-6 mr-50">
+              <a
+                className="text-l text-gray-400 no-underline hover:text-gray-400"
+                href="#"
               >
+                Book
+              </a>
+              <a className="text-l text-white no-underline" href="#">
+                Contact Us
+              </a>
+            </div>
+            <div className="flex justify-between flex-wrap space-x-6">
+              <a className="text-l text-white no-underline" href="#">
                 Login
-              </Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
+              </a>
+              <a></a>
+            </div>
+          </div>
+        </nav>
       </>
     );
-  } else if (props.mode === "user") {
+  } else if (props.mode == "psychiatrist") {
     return (
       <>
-        <Navbar style={{ backgroundColor: "#007A79" }}>
-          <Container>
-            <Navbar.Brand href="#home" style={{ color: "white" }}>
+        <nav className="bg-green-800 flex items-center justify-between flex-wrap p-6">
+          <div className="flex items-center flex-shrink-0 text-white mr-6">
+            <a
+              className="font-bold text-xl no-underline text-white ml-6"
+              href="#"
+            >
               Cerebra
-            </Navbar.Brand>
-            <Nav style={{ textAlign: "right" }}>
-              <Nav.Link href="#book" style={{ color: "white" }}>
-                Book
-              </Nav.Link>
-              <Nav.Link href="#contactUs" style={{ color: "white" }}>
-                Contact Us
-              </Nav.Link>
-              <Nav.Link
-                href="#logout"
-                style={{ paddingLeft: "100px", color: "white" }}
-              >
-                Logout
-              </Nav.Link>
-              <Nav.Link href="#notifications">
-                <img
-                  src="https://www.kindpng.com/picc/m/699-6998313_ios-bell-outline-comments-white-bell-icon-png.png"
-                  alt="Logo"
-                  style={{
-                    width: "25px",
-                    borderRadius: "100%",
-                    margin: "0 15px 0 15px",
-                  }}
-                />
-              </Nav.Link>
-              <Nav.Link href="#profile">
-                <img
-                  src="https://eshendetesia.com/images/user-profile.png"
-                  alt="Logo"
-                  style={{ width: "30px", borderRadius: "100%" }}
-                />
-              </Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
-      </>
-    );
-  } else if (props.mode === "psych") {
-    return (
-      <>
-        <Navbar style={{ backgroundColor: "#007A79" }}>
-          <Container>
-            <Navbar.Brand href="#home" style={{ color: "white" }}>
-              Cerebra
-            </Navbar.Brand>
-            <Nav style={{ textAlign: "right" }}>
-              <Nav.Link href="#bookings" style={{ color: "white" }}>
+            </a>
+          </div>
+          <div className="flex space-x-24">
+            <div className="space-x-6 mr-50">
+              <a className="text-l text-white no-underline" href="#">
                 Bookings
-              </Nav.Link>
-              <Nav.Link href="#contactUs" style={{ color: "white" }}>
+              </a>
+              <a className="text-l text-white no-underline" href="#">
                 Contact Us
-              </Nav.Link>
-              <Nav.Link
-                href="#logout"
-                style={{ paddingLeft: "100px", color: "white" }}
-              >
+              </a>
+            </div>
+            <div className="flex justify-between flex-wrap space-x-6">
+              <a className="text-l text-white no-underline" href="#">
                 Logout
-              </Nav.Link>
-              <Nav.Link href="#notifications">
+              </a>
+              <a href="#">
                 <img
                   src="https://www.kindpng.com/picc/m/699-6998313_ios-bell-outline-comments-white-bell-icon-png.png"
                   alt="Logo"
-                  style={{
-                    width: "25px",
-                    borderRadius: "100%",
-                    margin: "0 15px 0 15px",
-                  }}
+                  className="w-6 rounded-full"
                 />
-              </Nav.Link>
-              <Nav.Link href="#profile">
+              </a>
+              <a href="#">
                 <img
                   src="https://eshendetesia.com/images/user-profile.png"
                   alt="Logo"
-                  style={{ width: "30px", borderRadius: "100%" }}
+                  className="w-7 rounded-full"
                 />
-              </Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
+              </a>
+              <a></a>
+            </div>
+          </div>
+        </nav>
       </>
     );
-  } else if (props.mode === "moderator") {
-    return (
-      <>
-        <Navbar style={{ backgroundColor: "#007A79" }}>
-          <Container>
-            <Navbar.Brand href="#home" style={{ color: "white" }}>
-              Cerebra
-            </Navbar.Brand>
-            <Nav style={{ textAlign: "right" }}>
-              <Nav.Link href="#moderate" style={{ color: "white" }}>
-                Moderate
-              </Nav.Link>
-              <Nav.Link href="#requests" style={{ color: "white" }}>
-                Requests
-              </Nav.Link>
-              <Nav.Link href="#contactUs" style={{ color: "white" }}>
-                Contact Us
-              </Nav.Link>
-              <Nav.Link
-                href="#logout"
-                style={{ paddingLeft: "100px", color: "white" }}
-              >
-                Logout
-              </Nav.Link>
-              <Nav.Link href="#notifications">
-                <img
-                  src="https://www.kindpng.com/picc/m/699-6998313_ios-bell-outline-comments-white-bell-icon-png.png"
-                  alt="Logo"
-                  style={{
-                    width: "25px",
-                    borderRadius: "100%",
-                    margin: "0 15px 0 15px",
-                  }}
-                />
-              </Nav.Link>
-              <Nav.Link href="#profile">
-                <img
-                  src="https://eshendetesia.com/images/user-profile.png"
-                  alt="Logo"
-                  style={{ width: "30px", borderRadius: "100%" }}
-                />
-              </Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
-      </>
-    );
-  } else return <></>;
+  } else {
+    return <></>;
+  }
 };
 
 export default NavigationBar;
