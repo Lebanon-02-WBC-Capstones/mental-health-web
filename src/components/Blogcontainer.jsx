@@ -1,9 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import "../index.css";
-import { Users } from "../UsersData";
+import { UserContext } from "../UsersData";
 import Heart from "react-animated-heart";
-
+// import "../styles/app.css";
 function Blogcontainer() {
+  let context = useContext(UserContext);
   const [newPostItem, setNewPostItem] = useState([]);
   const input = useRef();
   const [like, setLike] = useState([]);
@@ -13,7 +14,7 @@ function Blogcontainer() {
     setLike(isClick ? like - 1 : like + 1);
     setClick(!isClick);
   };
-  var addToList = (e) => {
+  let addToList = (e) => {
     e.preventDefault();
     setNewPostItem([...newPostItem, input.current.value]);
   };
@@ -21,54 +22,55 @@ function Blogcontainer() {
   const clearInput = () => (input.current.value = "");
   return (
     <>
-      <div className="containerInput">
-        <div className="blogContainer">
+      <div className="flex justify-center pb-2">
+        <div className="border-purple-900 bg-green-700 border-solid rounded-2xl flex justify-center items-center p-3 ">
           <h4>Create post</h4>
-          <div>
-            <form className="blog" onSubmit={clearInput}>
-              <label>
-                <input
-                  ref={input}
-                  type="text"
-                  id="height"
-                  placeholder="Share your thoughts..."
-                />
-              </label>
-              <button onClick={addToList} className="postBtn">
-                Post
-              </button>
-            </form>
-          </div>
+
+          <form className="flex items-center p-3" onSubmit={clearInput}>
+            <label>
+              <input
+                ref={input}
+                type="text"
+                className="rounded-2xl leading-10 w-96 outline-none text-lg"
+                // value={ input.current?.value}
+                placeholder="    Share your thoughts..."
+              />
+            </label>
+
+            <button
+              onClick={addToList}
+              className="leading-8 ml-4 rounded-2xl  bg-purple w-20  border-none relative text-base hover:text-white	"
+            >
+              Post
+            </button>
+          </form>
         </div>
       </div>
 
       {newPostItem.map((item, index) => (
-        <div className="postBottomLeft" key={index}>
-          <div className="new_post">
-            <div className="List">
-              <div className="postTop">
-                <div className="postTopLeft">
-                  <img
-                    className="postProfileImg"
-                    src={Users[0].profilePicture}
-                    alt=""
-                  />
-                  <p className="postUsername">{Users[0].username}</p>
-                </div>
-              </div>{" "}
-              <p className="inputList">{item} </p>
+        <div className="flex justify-center p-4	items-center " key={index}>
+          <div className="overflow-auto break-words	pl-3 p-2  w-1/7 bg-gray-200 rounded-3xl items-center border-solid">
+            <div className="postTopLeft">
+              <img
+                className="  h-20 ml-2.5 rounded-full  "
+                src={context.profilePicture}
+                alt=""
+              />
+              <p className="text-base w-34 p-2">
+                <strong>{context.username}</strong>
+              </p>
+            </div>
+
+            <p className="break-words ml-4 ">{item} </p>
+            <div className="items-center w-46 flex">
               <span
-                key={index}
-                className="postLikeCounter"
+                className="text-sm flex items-center -ml-10 w-20  "
                 onClick={likeHandler}
               >
-                <Heart
-                  key={index}
-                  className="likeIcon"
-                  isClick={isClick}
-                  onClick={() => setClick(!isClick)}
-                />
-                {like} people like it
+                <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
+              </span>
+              <span className="text-sm flex items-center  ">
+                <strong> {like} people like it</strong>
               </span>
             </div>
           </div>
