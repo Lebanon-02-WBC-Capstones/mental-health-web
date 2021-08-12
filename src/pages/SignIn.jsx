@@ -7,24 +7,39 @@ function SignIn() {
       <Navbar mode="visitor" />
       <div>
         <div className="bg-gray-300 min-h-screen flex items-center justify-center">
-          <div className="bg-white p-7 w-5/6 align-middle rounded shadow-2x1 flex">
-            <div className="flex-col">
-              <p>Login</p>
-              <p>Sign up</p>
-              <h3>SIGN IN</h3>
-              <h5>Sign in to enjoy more benefits</h5>
-              <form>
+          <div className="bg-white w-4/6 align-middle rounded shadow-2x1 flex">
+            <div className="flex-col w-1/2 p-7">
+              <div className="flex space-x-2 justify-end text-sm mb-5">
+                <button className="text-green-700 font-bold">Login</button>
+                <button className="text-gray-500 font">Sign up</button>
+              </div>
+              <h3 className="text-3xl font-bold mb-2">SIGN IN</h3>
+              <h5 className="text-gray-400 font-light text-s mb-9">
+                Sign in to enjoy more benefits
+              </h5>
+              <form className="space-y-3">
                 <div>
-                  <label htmlFor="email">Email</label>
-                  <input type="text" id="email" />
+                  <input
+                    type="text"
+                    id="email"
+                    placeholder="Email"
+                    className="border border-black px-1 block w-full outline-none"
+                  />
                 </div>
                 <div>
-                  <label htmlFor="password">Password</label>
-                  <input type="text" id="password" />
+                  <input
+                    type="text"
+                    id="password"
+                    placeholder="Password"
+                    className="border border-black px-1 block w-full outline-none"
+                  />
                 </div>
-                <button>Sign In</button>
+                <button className="block w-full bg-green-700 p-2 rounded text-white hover:bg-green-600 transition duration-200">
+                  Sign In
+                </button>
               </form>
             </div>
+            <div className="bg-green-700 w-1/2"></div>
           </div>
         </div>
       </div>
