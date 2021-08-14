@@ -1,4 +1,4 @@
-import "../postfeed.css";
+ 
 import { UserContext } from "../UsersData";
 import Heart from "react-animated-heart";
 import React, { useState, useContext } from "react";
@@ -14,31 +14,34 @@ export default function Postfeed() {
     setClick(!isClick);
   };
   return (
-    <div className="flex justify-center p-4	items-center " key={context.id}>
-      <div className="overflow-auto break-words	pl-3 p-2  w-1/7 bg-gray-200 rounded-3xl items-center border-solid">
-        <div className="postTopLeft">
+    <div key={context.id} className="flex justify-center p-2.5">
+    <div className="flex justify-center p-4 items-center overflow-auto break-words	pl-3  w-10/12 bg-gray-200 rounded-3xl   border-solid " >
+
+       
           <img
-            className="  h-20 ml-2.5 rounded-full  "
-            src={context.profilePicture}
+            className="h-20   rounded-full  "
+            src={context[0].profilePicture}
             alt=""
           />
-          <p className="text-base w-34 p-2">
-            <strong>{context.username}</strong>
+          <p className="text-base p-2 flex italic w-20">
+            <strong>{context[0].username}</strong>
           </p>
-        </div>
+    
 
-        <p className="break-words ml-4 ">{context.post} </p>
-        <div className="items-center w-46 flex">
+        <p className="italic break-words ml-4 w-4/6 ">{context[0].post} </p>
+        <div className=" float-right ">
           <span
-            className="text-sm flex items-center -ml-10 w-20  "
+            className="text-sm h-14  flex justify-center items-center w-24    "
             onClick={likeHandler}
           >
-            <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
-          </span>
-          <span className="text-sm flex items-center  ">
-            <strong> {like} people like it</strong>
-          </span>
-        </div>
+             <Heart isClick={isClick} onClick={() =>
+               setClick(!isClick)} />
+           </span>
+           <span>
+              
+            <strong className="text-sm "> {like} people like it</strong>
+            </span></div>
+      
       </div>
     </div>
   );

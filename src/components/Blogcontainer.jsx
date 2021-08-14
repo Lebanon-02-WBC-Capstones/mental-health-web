@@ -5,74 +5,74 @@ import Heart from "react-animated-heart";
 // import "../styles/app.css";
 function Blogcontainer() {
   let context = useContext(UserContext);
-  const [newPostItem, setNewPostItem] = useState([]);
+  const [posts, setPosts] = useState([]);
   const input = useRef();
-  const [like, setLike] = useState([]);
   const [isClick, setClick] = useState(false);
-
   const likeHandler = () => {
-    setLike(isClick ? like - 1 : like + 1);
-    setClick(!isClick);
+     setClick(!isClick);
   };
+  
   let addToList = (e) => {
     e.preventDefault();
-    setNewPostItem([...newPostItem, input.current.value]);
+    setPosts([...posts, { text: input.current.value, user: "John Doe", likes: [] }]);
+    input.current.value = "";
   };
 
-  const clearInput = () => (input.current.value = "");
-  return (
+   return (
     <>
-      <div className="flex justify-center pb-2">
-        <div className="border-purple-900 bg-green-700 border-solid rounded-2xl flex justify-center items-center p-3 ">
+      <div className="flex justify-center  pb-2">
+        <div className="border-purple-900 bg-gray-200 border-solid justify-evenly  rounded-2xl w-4/5	flex  items-center p-3 ">
           <h4>Create post</h4>
 
-          <form className="flex items-center p-3" onSubmit={clearInput}>
+          <form className="flex items-center p-3">
             <label>
               <input
                 ref={input}
                 type="text"
-                className="rounded-2xl leading-10 w-96 outline-none text-lg"
-                // value={ input.current?.value}
-                placeholder="    Share your thoughts..."
+                className="rounded-2xl leading-10 w-96 outline-none text-md"
+                 placeholder="    Share your thoughts..."
               />
             </label>
 
             <button
               onClick={addToList}
-              className="leading-8 ml-4 rounded-2xl  bg-purple w-20  border-none relative text-base hover:text-white	"
+              className="leading-8 ml-4 rounded-2xl  bg-gray-400 w-20  border-none relative text-base hover:text-white	"
             >
-              Post
+              Share
             </button>
           </form>
         </div>
       </div>
 
-      {newPostItem.map((item, index) => (
-        <div className="flex justify-center p-4	items-center " key={index}>
-          <div className="overflow-auto break-words	pl-3 p-2  w-1/7 bg-gray-200 rounded-3xl items-center border-solid">
-            <div className="postTopLeft">
+       {posts.map((item, index) => (
+        <div key={index} className="flex justify-center p-2.5">
+        <div className="flex justify-center p-4 items-center overflow-auto break-words	pl-3  w-10/12 bg-gray-200 rounded-3xl   border-solid " >
+    
+           
               <img
-                className="  h-20 ml-2.5 rounded-full  "
-                src={context.profilePicture}
+                className="h-20   rounded-full  "
+                src={context[0].profilePicture}
                 alt=""
               />
-              <p className="text-base w-34 p-2">
-                <strong>{context.username}</strong>
+              <p className="text-base p-2 flex italic w-20">
+                <strong>{context[0].username}</strong>
               </p>
-            </div>
+        
 
-            <p className="break-words ml-4 ">{item} </p>
-            <div className="items-center w-46 flex">
+            <p className="italic break-words ml-4 w-4/6 ">{item} </p>
+            <div className=" float-right ">
               <span
-                className="text-sm flex items-center -ml-10 w-20  "
+                className="text-sm h-14  flex justify-center items-center w-24    "
                 onClick={likeHandler}
               >
-                <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
-              </span>
-              <span className="text-sm flex items-center  ">
-                <strong> {like} people like it</strong>
-              </span>
-            </div>
+              
+<Heart isClick={item.likes.includes("John Doe")} onClick={() => item.likes.push("John Doe")} />
+               </span>
+               <span>
+                  
+                <strong className="text-sm "> {item} people like it</strong>
+                </span></div>
+          
           </div>
         </div>
       ))}
