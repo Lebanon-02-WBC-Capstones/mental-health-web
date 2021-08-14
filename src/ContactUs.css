@@ -1,11 +1,10 @@
-.body {
+/* .body {
   margin: 0;
   padding: 0;
 }
 
 .contactHeader {
-  width: 100vw;
-  min-height: 25vh;
+  min-height: 20vh;
   box-shadow: 0px 0px 5px gray;
   background-image: url(../src/contact-us-header.jpg);
   background-repeat: no-repeat;
@@ -81,4 +80,5 @@
   font-size: 24px;
   text-align: center;
   border-radius: 10px;
-}
+} */
+
