@@ -1,7 +1,4 @@
 import React from "react";
-// import "bootstrap/dist/css/bootstrap.min.css";
-import "../index.css";
-// import { Navbar, Container, Nav } from "react-bootstrap";
 
 const NavigationBar = (props) => {
   if (props.mode == "user") {
