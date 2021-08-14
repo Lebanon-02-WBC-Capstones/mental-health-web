@@ -12,9 +12,9 @@ function App() {
       <div>
         <Switch>
           <Route path="/" exact component={LandingPage} />
-          <Route path="/Blog" exact component={BlogPage} />
-          <Route path="/ContactUs" exact component={ContactUs} />
-          <Route path="/ShrinkCarousel" exact component={ShrinkCarousel} />
+          <Route path="/blog" exact component={BlogPage} />
+          <Route path="/contact-us" exact component={ContactUs} />
+          <Route path="/shrink-carousel" exact component={ShrinkCarousel} />
         </Switch>
       </div>
     </Router>
