@@ -5,6 +5,7 @@ import BlogPage from "./pages/BlogPage";
 import ContactUs from "./pages/ContactUs";
 import ShrinkCarousel from "./pages/ShrinkCarousel";
 import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/ContactUs" component={ContactUs} />
           <Route path="/ShrinkCarousel" component={ShrinkCarousel} />
           <Route path="/sign-in" component={SignIn} />
+          <Route path="/sign-up" component={SignUp} />
         </Switch>
       </div>
     </Router>

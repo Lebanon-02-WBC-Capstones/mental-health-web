@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/NavigationBar";
 
-function SignIn() {
+function SignUp() {
   return (
     <>
       <Navbar mode="visitor" />
@@ -10,14 +10,19 @@ function SignIn() {
           <div className="bg-white w-4/6 align-middle rounded shadow-2x1 flex">
             <div className="flex-col w-1/2 p-7">
               <div className="flex space-x-2 justify-end text-sm mb-5">
-                <button className="text-green-700 font-bold">Login</button>
-                <button className="text-gray-500 font">Sign up</button>
+                <button className="text-gray-500 font">Login</button>
+                <button className="text-green-700 font-bold">Sign up</button>
               </div>
-              <h3 className="text-2xl font-bold mb-2">SIGN IN</h3>
-              <h5 className="text-gray-400 font-light text-s mb-9">
-                Sign in to enjoy more benefits
-              </h5>
+              <h3 className="text-2xl font-bold mb-2">SIGN UP</h3>
               <form className="space-y-3">
+                <div>
+                  <input
+                    type="text"
+                    id="username"
+                    placeholder="User Name"
+                    className="border border-black px-1 block w-full outline-none"
+                  />
+                </div>
                 <div>
                   <input
                     type="text"
@@ -34,6 +39,14 @@ function SignIn() {
                     className="border border-black px-1 block w-full outline-none"
                   />
                 </div>
+                <div>
+                  <input
+                    type="text"
+                    id="confirm-password"
+                    placeholder="Confirm Password"
+                    className="border border-black px-1 block w-full outline-none"
+                  />
+                </div>
                 <button className="block w-full bg-green-700 p-2 rounded-lg text-white hover:bg-green-600 transition duration-200">
                   Sign In
                 </button>
@@ -47,4 +60,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default SignUp;
