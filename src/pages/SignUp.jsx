@@ -13,7 +13,7 @@ function SignUp() {
                 <button className="text-gray-500 font">Login</button>
                 <button className="text-green-700 font-bold">Sign up</button>
               </div>
-              <h3 className="text-2xl font-bold mb-2">SIGN UP</h3>
+              <h3 className="text-2xl font-bold mb-4">SIGN UP</h3>
               <form className="space-y-3">
                 <div>
                   <input
@@ -47,9 +47,14 @@ function SignUp() {
                     className="border border-black px-1 block w-full outline-none"
                   />
                 </div>
-                <button className="block w-full bg-green-700 p-2 rounded-lg text-white hover:bg-green-600 transition duration-200">
-                  Sign In
+                <button className="block w-full bg-green-700 p-2 rounded-lg text-white hover:bg-green-600 transition duration-200 shadow-md">
+                  Sign Up
                 </button>
+                <div className="flex justify-center">
+                  <button className="text-gray-500 font-light text-xs">
+                    Register as a pshyciatrist
+                  </button>
+                </div>
               </form>
             </div>
             <div className="bg-green-700 w-1/2"></div>

@@ -13,7 +13,7 @@ function SignIn() {
                 <button className="text-green-700 font-bold">Login</button>
                 <button className="text-gray-500 font">Sign up</button>
               </div>
-              <h3 className="text-2xl font-bold mb-2">SIGN IN</h3>
+              <h3 className="text-2xl font-bold mb-4 shadow-md">SIGN IN</h3>
               <h5 className="text-gray-400 font-light text-s mb-9">
                 Sign in to enjoy more benefits
               </h5>
