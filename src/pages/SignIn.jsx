@@ -13,7 +13,7 @@ function SignIn() {
                 <button className="text-green-700 font-bold">Login</button>
                 <button className="text-gray-500 font">Sign up</button>
               </div>
-              <h3 className="text-2xl font-bold mb-4 shadow-md">SIGN IN</h3>
+              <h3 className="text-2xl font-bold mb-4">SIGN IN</h3>
               <h5 className="text-gray-400 font-light text-s mb-9">
                 Sign in to enjoy more benefits
               </h5>
@@ -34,7 +34,7 @@ function SignIn() {
                     className="border border-black px-1 block w-full outline-none"
                   />
                 </div>
-                <button className="block w-full bg-green-700 p-2 rounded-lg text-white hover:bg-green-600 transition duration-200">
+                <button className="block w-full bg-green-700 p-2 rounded-lg text-white hover:bg-green-600 transition duration-200 shadow-md">
                   Sign In
                 </button>
               </form>

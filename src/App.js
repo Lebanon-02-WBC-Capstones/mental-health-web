@@ -6,6 +6,7 @@ import ContactUs from "./pages/ContactUs";
 import ShrinkCarousel from "./pages/ShrinkCarousel";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import SignUpPhsyciatrist from "./pages/SignUpPhysciatrist";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/ShrinkCarousel" component={ShrinkCarousel} />
           <Route path="/sign-in" component={SignIn} />
           <Route path="/sign-up" component={SignUp} />
+          <Route path="/sign-up-phsyciatrist" component={SignUpPhsyciatrist} />
         </Switch>
       </div>
     </Router>
