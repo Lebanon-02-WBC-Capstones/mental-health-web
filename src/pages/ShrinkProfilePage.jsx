@@ -9,7 +9,7 @@ function ShrinkProfilePage() {
         <>
          <Navbar mode="user" />
          <div className="flex flex-col justify-center bg-white" style={{height: "100vh"}}>
-            <div className="shrinkHeader w-full shadow-md"style={{height: "40%", boxShadow: "0px 0px 5px gray"}}s>
+            <div className="shrinkHeader w-full shadow-md"style={{height: "40%", boxShadow: "0px 0px 8px gray"}}s>
                 <div className="bg-cover bg-no-repeat"
                     style={{
                         height: "50%",
@@ -18,7 +18,6 @@ function ShrinkProfilePage() {
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat"}}>
                 </div>
-
                 <div className="flex">
                     <div className="w-4/12 p-8">
                         <div style={{
@@ -35,7 +34,7 @@ function ShrinkProfilePage() {
                     </div>
                     <div className="w-8/12 p-8">
                         <h3>Dr. Amy Lee</h3>
-                        <p className="mt-2">Cognitive-Behaviorral Therapy</p>
+                        <p className="pt-2">Cognitive-Behaviorral Therapy</p>
                         <a className="bg-green-700 px-8 py-2 text-white text-center no-underline rounded cursor-pointer">Connect</a>
                     </div>
                 </div>
@@ -59,9 +58,9 @@ function ShrinkProfilePage() {
                         <div>
                             <span className="text-green-700 text-2xl">LANGUAGES</span>
                             <ul className="px-0 py-2">
+                                <li>English</li>
                                 <li>Arabic</li>
                                 <li>french</li>
-                                <li>English</li>
                             </ul>
                         </div>
                         <div>
