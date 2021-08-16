@@ -6,7 +6,7 @@ import ContactUs from "./pages/ContactUs";
 import ShrinkCarousel from "./pages/ShrinkCarousel";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { StateProvider } from "./UsersData";
-
+ 
 function App() {
   return (
     <Router>
@@ -18,6 +18,7 @@ function App() {
           </StateProvider>
           <Route path="/ContactUs" exact component={ContactUs} />
           <Route path="/ShrinkCarousel" exact component={ShrinkCarousel} />
+         
         </Switch>
       </div>
     </Router>
