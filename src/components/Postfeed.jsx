@@ -8,7 +8,7 @@ export default function Postfeed() {
   const [like, setLike] = useState([]);
   const [isClick, setClick] = useState(false);
 
-  const likeHandler = () => {
+  const likeHandler = () => { 
     setLike(isClick ? like - 1 : like + 1);
     setClick(!isClick);
   };

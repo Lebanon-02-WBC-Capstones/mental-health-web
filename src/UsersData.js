@@ -1,6 +1,7 @@
 import React, { createContext } from "react";
-import Blogcontainer from "./components/Blogcontainer";
-import Postfeed from "./components/Postfeed";
+// import Blogcontainer from "./components/Blogcontainer";
+// import Postfeed from "./components/Postfeed";
+// import Blog from "./pages/BlogPage";
 export const UserContext = createContext();
 
 const userData = {
@@ -13,11 +14,11 @@ const userData = {
   likes: [],
 };
 
-export const StateProvider = () => {
+export const StateProvider = (prop) => {
   return (
     <UserContext.Provider value={userData}>
-      <Blogcontainer></Blogcontainer>
-      <Postfeed />
+       {prop.children}
+     
     </UserContext.Provider>
   );
 };

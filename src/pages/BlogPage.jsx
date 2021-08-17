@@ -6,7 +6,8 @@ import Navbar from "../components/NavigationBar";
 function BlogPage() {
   return (
     <div>
-      <Navbar />
+      <Navbar mode="user" />
+      
       <Blogcontainer />
       <Postfeed />
     </div>

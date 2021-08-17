@@ -22,12 +22,12 @@ function Blogcontainer() {
 
   return (
     <>
-      <div className="flex justify-center  pb-5">
+      <div className="flex justify-center mt-9	 pb-5">
         <div className=" bg-white border-solid justify-evenly  rounded-2xl w-4/5	flex  items-center p-3 ">
           <div>
             <h4 className="font-serif ">Create post</h4>
           </div>
-          <form className="flex items-center p-3">
+          <form className="flex items-center p-3 ">
             <label>
               <input
                 style={{
