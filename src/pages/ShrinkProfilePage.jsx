@@ -41,7 +41,7 @@ function ShrinkProfilePage() {
               ></div>
             </div>
             <div className="w-8/12 p-8">
-              <h3>Dr. Gregory House</h3>
+              <h3 className="text-xl font-bold">Dr. Gregory House</h3>
               <p className="pt-2 mb-4">Cognitive-Behaviorral Therapy</p>
               <a className="bg-green-700 px-8 py-2 text-white text-center no-underline rounded cursor-pointer">
                 Connect
