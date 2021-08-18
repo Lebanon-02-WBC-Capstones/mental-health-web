@@ -1,7 +1,6 @@
 import "./ShrinkCarousel.css";
 import { Users } from "../data.js";
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
 import Navbar from "../components/NavigationBar";
 import { Link } from "react-router-dom";

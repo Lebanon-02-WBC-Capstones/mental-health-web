@@ -8,6 +8,7 @@ import SignUp from "./pages/SignUp";
 import SignUpPhsyciatrist from "./pages/SignUpPhysciatrist";
 import ShrinkProfilePage from "./pages/ShrinkProfilePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
