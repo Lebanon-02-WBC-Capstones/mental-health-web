@@ -1,5 +1,4 @@
-import "../App.css";
-import "../style.css";
+import "./ShrinkCarousel.css";
 import { Users } from "../data.js";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";

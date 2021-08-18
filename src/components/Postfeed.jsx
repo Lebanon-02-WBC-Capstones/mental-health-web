@@ -1,43 +1,40 @@
-import "../postfeed.css";
+import { UserContext } from "../UsersData";
+import Heart from "react-animated-heart";
+import React, { useState, useContext } from "react";
 
-import { Users, Posts } from "../UsersData";
-import React, { useState } from "react";
+export default function Postfeed() {
+  let context = useContext(UserContext);
 
-export default function Post() {
   const [like, setLike] = useState([]);
-  const [isLiked, setIsLiked] = useState(false);
+  const [isClick, setClick] = useState(false);
 
   const likeHandler = () => {
-    setLike(isLiked ? like - 1 : like + 1);
-    setIsLiked(!isLiked);
+    setLike(isClick ? like - 1 : like + 1);
+    setClick(!isClick);
   };
   return (
-    <div className="post">
-      <div className="postWrapper">
-        <div className="postTop">
-          <div className="postTopLeft">
-            <img
-              className="postProfileImg"
-              src={Users[0].profilePicture}
-              alt=""
-            />
-            <span className="postUsername">{Users[0].username}</span>
-            <span className="postDate">{Posts[0].date}</span>
-          </div>
-        </div>
-        <div className="postCenter">
-          <span className="postText">{Posts[0].post}</span>
-        </div>
-        <div className="postBottom">
-          <div className="postBottomLeft">
-            <img
-              className="likeIcon"
-              src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/twitter/154/heavy-black-heart_2764.png"
-              onClick={likeHandler}
-              alt=""
-            />
-            <span className="postLikeCounter">{like} people like it</span>
-          </div>
+    <div key={context.id} className="flex justify-center p-2.5 ">
+      <div className="flex justify-center p-4 items-center overflow-auto break-words m-1.5pl-3 w-10/12 bg-white rounded-3xl   border-solid ">
+        <img
+          className="h-20 rounded-full"
+          src={context.profilePicture}
+          alt=""
+        />
+        <p className="text-base p-2 flex italic w-20">
+          <strong>{context.username}</strong>
+        </p>
+
+        <p className="italic break-words ml-4 w-9/12 ">{context.post}</p>
+        <div className=" float-right w-28">
+          <span
+            className="text-sm h-14  flex justify-center items-center w-24"
+            onClick={likeHandler}
+          >
+            <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
+          </span>
+          <span>
+            <strong className="text-sm "> {like} people like it</strong>
+          </span>
         </div>
       </div>
     </div>

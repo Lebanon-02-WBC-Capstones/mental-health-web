@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "../components/NavigationBar";
+import { Link } from "react-router-dom";
+import signinbg from "../signin-bg.png";
 
 function SignIn() {
   return (
@@ -11,7 +13,9 @@ function SignIn() {
             <div className="flex-col w-1/2 p-7">
               <div className="flex space-x-2 justify-end text-sm mb-5">
                 <button className="text-green-700 font-bold">Login</button>
-                <button className="text-gray-500 font">Sign up</button>
+                <Link to="/sign-up">
+                  <button className="text-gray-500 font">Sign up</button>
+                </Link>
               </div>
               <h3 className="text-2xl font-bold mb-4">SIGN IN</h3>
               <h5 className="text-gray-400 font-light text-s mb-9">
@@ -39,7 +43,13 @@ function SignIn() {
                 </button>
               </form>
             </div>
-            <div className="bg-green-700 w-1/2"></div>
+            <div
+              className="w-1/2 bg-contain bg-no-repeat bg-center"
+              style={{
+                backgroundImage: `url(${signinbg})`,
+                backgroundColor: "#FDECD8",
+              }}
+            ></div>
           </div>
         </div>
       </div>

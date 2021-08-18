@@ -1,4 +1,3 @@
-import "./App.css";
 import React from "react";
 import LandingPage from "./pages/LandingPage.jsx";
 import BlogPage from "./pages/BlogPage";
@@ -7,12 +6,13 @@ import ShrinkCarousel from "./pages/ShrinkCarousel";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import SignUpPhsyciatrist from "./pages/SignUpPhysciatrist";
+import ShrinkProfilePage from "./pages/ShrinkProfilePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className="h-full">
         <Switch>
           <Route path="/" exact component={LandingPage} />
           <Route path="/Blog" component={BlogPage} />
@@ -21,6 +21,7 @@ function App() {
           <Route path="/sign-in" component={SignIn} />
           <Route path="/sign-up" component={SignUp} />
           <Route path="/sign-up-phsyciatrist" component={SignUpPhsyciatrist} />
+          <Route path="/ShrinkProfilePage" component={ShrinkProfilePage} />
         </Switch>
       </div>
     </Router>
