@@ -1,9 +1,13 @@
 import React from "react";
 import Navbar from "../components/NavigationBar";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import signupbg from "../signup-bg.png";
 
 function SignUp() {
+  const history = useHistory();
+  const gotoBlog = () => {
+    history.push("/blog");
+  };
   return (
     <>
       <Navbar mode="visitor" />
@@ -37,7 +41,7 @@ function SignUp() {
                 </div>
                 <div>
                   <input
-                    type="text"
+                    type="password"
                     id="password"
                     placeholder="Password"
                     className="border border-black px-1 block w-full outline-none"
@@ -45,19 +49,24 @@ function SignUp() {
                 </div>
                 <div>
                   <input
-                    type="text"
+                    type="password"
                     id="confirm-password"
                     placeholder="Confirm Password"
                     className="border border-black px-1 block w-full outline-none"
                   />
                 </div>
-                <button className="block w-full bg-green-700 p-2 rounded-lg text-white hover:bg-green-600 transition duration-200 shadow-md">
+                <button
+                  onClick={gotoBlog}
+                  className="block w-full bg-green-700 p-2 rounded-lg text-white hover:bg-green-600 transition duration-200 shadow-md"
+                >
                   Sign Up
                 </button>
                 <div className="flex justify-center">
-                  <button className="text-gray-500 font-light text-xs">
-                    Register as a pshyciatrist
-                  </button>
+                  <Link to="/sign-up-psychiatrist">
+                    <button className="text-gray-500 font-light text-xs">
+                      Register as a psychiatrist
+                    </button>
+                  </Link>
                 </div>
               </form>
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/NavigationBar";
+import psych from "../psych.png";
 
 function SignUpPhsyciatrist() {
   return (
@@ -58,7 +59,12 @@ function SignUpPhsyciatrist() {
                 </button>
               </form>
             </div>
-            <div className="bg-green-700 w-1/2"></div>
+            <div
+              className="bg-green-700 w-1/2"
+              style={{
+                backgroundImage: `url(${psych})`,
+              }}
+            ></div>
           </div>
         </div>
       </div>

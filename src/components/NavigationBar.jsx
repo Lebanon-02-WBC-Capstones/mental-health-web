@@ -1,31 +1,40 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const NavigationBar = (props) => {
   if (props.mode == "user") {
     return (
       <>
         <nav className="bg-green-800 flex items-center justify-between flex-wrap p-6">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
-            <a
+            <Link
+              to="/"
               className="font-bold text-xl no-underline text-white ml-6"
-              href="#"
             >
               Cerebra
-            </a>
+            </Link>
           </div>
           <div className="flex space-x-24">
             <div className="space-x-6 mr-50">
-              <a className="text-l text-white no-underline" href="#">
+              <Link
+                className="text-l text-white no-underline hover:text-gray-400"
+                to="/blog"
+              >
+                Blog
+              </Link>
+              <Link
+                to="/shrink-carousel"
+                className="text-l text-white no-underline"
+              >
                 Book
-              </a>
-              <a className="text-l text-white no-underline" href="#">
+              </Link>
+              <Link to="/contact-us" className="text-l text-white no-underline">
                 Contact Us
-              </a>
+              </Link>
             </div>
             <div className="flex justify-between flex-wrap space-x-6">
-              <a className="text-l text-white no-underline" href="#">
+              <Link className="text-l text-white no-underline" to="/sign-in">
                 Logout
-              </a>
+              </Link>
               <a href="#">
                 <img
                   src="https://www.kindpng.com/picc/m/699-6998313_ios-bell-outline-comments-white-bell-icon-png.png"
@@ -51,30 +60,35 @@ const NavigationBar = (props) => {
       <>
         <nav className="bg-green-800 flex items-center justify-between flex-wrap p-6">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
-            <a
+            <Link
               className="font-bold text-xl no-underline text-white ml-6"
-              href="#"
+              to="/blog"
             >
               Cerebra
-            </a>
+            </Link>
           </div>
           <div className="flex space-x-24">
             <div className="space-x-6 mr-50">
-              <a
+              <Link
+                className="text-l text-white no-underline hover:text-gray-400"
+                to="/blog"
+              >
+                Blog
+              </Link>
+              <Link
                 className="text-l text-gray-400 no-underline hover:text-gray-400"
-                href="#"
+                to="/shrink-carousel"
               >
                 Book
-              </a>
-              <a className="text-l text-white no-underline" href="#">
+              </Link>
+              <Link className="text-l text-white no-underline" to="/contact-us">
                 Contact Us
-              </a>
+              </Link>
             </div>
             <div className="flex justify-between flex-wrap space-x-6">
-              <a className="text-l text-white no-underline" href="#">
+              <Link className="text-l text-white no-underline" to="/sign-in">
                 Login
-              </a>
-              <a></a>
+              </Link>
             </div>
           </div>
         </nav>

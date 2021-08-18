@@ -3,7 +3,7 @@ import Heart from "react-animated-heart";
 import React, { useState, useContext } from "react";
 
 export default function Postfeed() {
-  let context = useContext(UserContext);
+  let contexts = useContext(UserContext);
 
   const [like, setLike] = useState([]);
   const [isClick, setClick] = useState(false);
@@ -12,7 +12,7 @@ export default function Postfeed() {
     setLike(isClick ? like - 1 : like + 1);
     setClick(!isClick);
   };
-  return (
+  return contexts.map((context) => (
     <div key={context.id} className="flex justify-center p-2.5 ">
       <div className="flex justify-center p-4 items-center overflow-auto break-words m-1.5pl-3 w-10/12 bg-white rounded-3xl   border-solid ">
         <img
@@ -38,5 +38,5 @@ export default function Postfeed() {
         </div>
       </div>
     </div>
-  );
+  ));
 }

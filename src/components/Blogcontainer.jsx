@@ -1,9 +1,7 @@
-import React, { useState, useRef, useContext } from "react";
-import { UserContext } from "../UsersData";
+import React, { useState, useRef } from "react";
 import Heart from "react-animated-heart";
 
 function Blogcontainer() {
-  let context = useContext(UserContext);
   const [posts, setPosts] = useState([]);
   const input = useRef();
   const [isClick, setClick] = useState(false);
@@ -55,11 +53,11 @@ function Blogcontainer() {
           <div className="flex bg-white justify-center p-4 items-center overflow-auto break-words	pl-3  w-10/12  rounded-3xl   border-solid ">
             <img
               className="h-20 rounded-full"
-              src={context.profilePicture}
+              src="https://eshendetesia.com/images/user-profile.png"
               alt=""
             />
             <p className="text-base p-2 flex italic w-20">
-              <strong>{context.username}</strong>
+              <strong>Test User</strong>
             </p>
 
             <p className="italic break-words ml-4 w-9/12 ">{item.text}</p>

@@ -15,13 +15,17 @@ function App() {
       <div className="h-full">
         <Switch>
           <Route path="/" exact component={LandingPage} />
-          <Route path="/Blog" component={BlogPage} />
-          <Route path="/ContactUs" component={ContactUs} />
-          <Route path="/ShrinkCarousel" component={ShrinkCarousel} />
+          <Route path="/blog" exact component={BlogPage} />
+          <Route path="/contact-us" exact component={ContactUs} />
+          <Route path="/shrink-carousel" exact component={ShrinkCarousel} />
+          <Route
+            path="/shrink-profile-page"
+            exact
+            component={ShrinkProfilePage}
+          />
           <Route path="/sign-in" component={SignIn} />
           <Route path="/sign-up" component={SignUp} />
-          <Route path="/sign-up-phsyciatrist" component={SignUpPhsyciatrist} />
-          <Route path="/ShrinkProfilePage" component={ShrinkProfilePage} />
+          <Route path="/sign-up-psychiatrist" component={SignUpPhsyciatrist} />
         </Switch>
       </div>
     </Router>

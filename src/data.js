@@ -2,9 +2,9 @@ export const Users = [
   {
     id: 1,
     profilepicture:
-      "https://p.kindpng.com/picc/s/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png",
-    username: "Hazar",
-    LiscenceType: "General Phychiatrist",
+      "https://miro.medium.com/max/3840/1*zCw9YQICYZzozYZsqeIiYA.png",
+    username: "Dr. Gregory House",
+    LiscenceType: "Cognitive-Behaviorral Therapy",
   },
   {
     id: 2,

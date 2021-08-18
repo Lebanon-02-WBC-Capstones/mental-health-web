@@ -1,9 +1,13 @@
 import React from "react";
 import Navbar from "../components/NavigationBar";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import signinbg from "../signin-bg.png";
 
 function SignIn() {
+  const history = useHistory();
+  const gotoBlog = () => {
+    history.push("/blog");
+  };
   return (
     <>
       <Navbar mode="visitor" />
@@ -32,13 +36,16 @@ function SignIn() {
                 </div>
                 <div>
                   <input
-                    type="text"
+                    type="password"
                     id="password"
                     placeholder="Password"
                     className="border border-black px-1 block w-full outline-none"
                   />
                 </div>
-                <button className="block w-full bg-green-700 p-2 rounded-lg text-white hover:bg-green-600 transition duration-200 shadow-md">
+                <button
+                  onClick={gotoBlog}
+                  className="block w-full bg-green-700 p-2 rounded-lg text-white hover:bg-green-600 transition duration-200 shadow-md"
+                >
                   Sign In
                 </button>
               </form>

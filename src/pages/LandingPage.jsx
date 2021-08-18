@@ -32,7 +32,7 @@ function LandingPage() {
               <b>Know your option and take care of yourself.</b>
             </p>
             <Link
-              to="/Blog"
+              to="/sign-up"
               className="bg-green-700 font-serif rounded-xl items-center text-base text-white p-2.5 m-1 no-underline"
             >
               Join our community
