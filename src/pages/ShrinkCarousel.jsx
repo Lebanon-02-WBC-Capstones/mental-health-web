@@ -5,7 +5,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
 import Navbar from "../components/NavigationBar";
-
+import { Link } from "react-router-dom";
 function ShrinkCarousel() {
   const usersarray = Users.map((item) => (
     <Carousel.Item key={item.id}>
@@ -25,9 +25,9 @@ function ShrinkCarousel() {
           <button className="carouselbutton">
             <b>Lets Connect</b>
           </button>
-          <button className="carouselbutton">
+          <Link className="carouselbutton" to="/shrink-profile-page">
             <b>More Info</b>
-          </button>
+          </Link>
         </div>
       </Carousel.Caption>
     </Carousel.Item>
@@ -37,9 +37,6 @@ function ShrinkCarousel() {
     <>
       <Navbar mode="user" />
       <div className="carouselpage">
-        <button className="showcards">
-          <b>Show cards</b>
-        </button>
         <Carousel className="carousel">{usersarray}</Carousel>
       </div>
     </>
