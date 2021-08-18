@@ -32,6 +32,15 @@ const posts = [
     post: "It's my experience that people are a lot more sympathetic if they can see you hurting, and for the millionth time in my life I wish for measles or smallpox or some other easily understood disease just to make it easier on me and also on them.",
     likes: [],
   },
+  {
+    id: 4,
+    profilePicture:
+      "https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29tYW4lMjBwcm9maWxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+    username: "Munera",
+    desc: "loren ipsum as jsa e edad rajsd jasd ahasd adsha sdadad a ",
+    post: "You don’t have to control your thoughts. You just have to stop letting them control you.",
+    likes: [],
+  },
 ];
 
 export const StateProvider = (prop) => {
