@@ -1,13 +1,13 @@
 import React from "react";
-import Blog from "../components/blog";
+import Blogcontainer from "../components/Blogcontainer";
 import Postfeed from "../components/Postfeed";
 import Navbar from "../components/NavigationBar";
 
 function BlogPage() {
   return (
-    <div>
+    <div className="bg-gray-200 h-full">
       <Navbar mode="user" />
-      <Blog />
+      <Blogcontainer />
       <Postfeed />
     </div>
   );
