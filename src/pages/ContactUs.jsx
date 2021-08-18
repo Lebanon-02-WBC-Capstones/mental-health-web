@@ -20,12 +20,15 @@ function ContactUs() {
     <>
       <Navbar mode="user" />
       <div className="bg-white">
-        <div style={{  
-          backgroundImage: `url("${Background}")`,
-          backgroundPosition: "right",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat"}}
-        className="contactHeader h-40 flex justify-center items-end w-full pt-8 shadow-md bg-contain bg-no-repeat">
+        <div
+          style={{
+            backgroundImage: `url("${Background}")`,
+            backgroundPosition: "right",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+          className="contactHeader h-40 flex justify-center items-end w-full pt-8 shadow-md bg-contain bg-no-repeat"
+        >
           <h2 className="text-center pb-2">Contact Us</h2>
         </div>
         <div className="contactBody p-8">
@@ -37,7 +40,6 @@ function ContactUs() {
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="ml-8">
               <h4>Type Of Contact</h4>
-
               <input
                 type="radio"
                 id="question"
@@ -45,7 +47,9 @@ function ContactUs() {
                 value="question"
               />
                {" "}
-              <label htmlFor="question" className="text-xl">I have a question about the service.</label>
+              <label htmlFor="question" className="text-xl">
+                I have a question about the service.
+              </label>
               <br></br>
               <input
                 type="radio"
@@ -102,18 +106,27 @@ function ContactUs() {
                 I am interested in BetterHelp for my organization.
               </label>
               <br></br>
-              <input type="radio" id="billing" name="contactType" value="billing" />
-                <label htmlFor="billing" className="text-xl">I have a billing related question.</label>
+              <input
+                type="radio"
+                id="billing"
+                name="contactType"
+                value="billing"
+              />
+               {" "}
+              <label htmlFor="billing" className="text-xl">
+                I have a billing related question.
+              </label>
               <br></br>
             </div>
             <div className="input-fields">
               <div className="inputOne p-4 flex justify-evenly items-center">
                 <div className="flex justify-evenly items-center">
-                  <label className="text-xl px-2" style={{width: "150px"}}>First Name:
+                  <label className="text-xl px-2" style={{ width: "150px" }}>
+                    First Name:
                   </label>
                   <input
                     className="border-1 border-black rounded px-8 py-2 ml-4"
-                    style={{width: "250px"}}
+                    style={{ width: "250px" }}
                     type="text"
                     value={firstName}
                     placeholder=""
@@ -122,11 +135,12 @@ function ContactUs() {
                   />
                 </div>
                 <div className="flex justify-evenly items-center">
-                  <label className="text-xl px-2" style={{width: "150px"}}>Last Name:
+                  <label className="text-xl px-2" style={{ width: "150px" }}>
+                    Last Name:
                   </label>
                   <input
                     className="border-1 border-black rounded px-8 py-2 ml-4"
-                    style={{width: "250px"}}
+                    style={{ width: "250px" }}
                     type="text"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
@@ -136,11 +150,12 @@ function ContactUs() {
               </div>
               <div className="inputTwo p-4 flex justify-evenly items-center">
                 <div className="flex justify-evenly items-center">
-                  <label className="text-xl px-2" style={{width: "150px"}}>Email Address:
+                  <label className="text-xl px-2" style={{ width: "150px" }}>
+                    Email Address:
                   </label>
                   <input
                     className="border-1 border-black rounded px-8 py-2 ml-4"
-                    style={{width: "250px"}}
+                    style={{ width: "250px" }}
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -148,11 +163,12 @@ function ContactUs() {
                   />
                 </div>
                 <div className="flex justify-evenly items-center">
-                  <label className="text-xl px-2" style={{width: "150px"}}>Message:
+                  <label className="text-xl px-2" style={{ width: "150px" }}>
+                    Message:
                   </label>
                   <textarea
                     className="border-1 border-black rounded px-8 py-2 ml-4"
-                    style={{width: "250px"}}
+                    style={{ width: "250px" }}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     required
@@ -160,7 +176,11 @@ function ContactUs() {
                 </div>
               </div>
               <div className="inputThree p-4 flex justify-center items-center">
-                <input className="submitBtn bg-green-700 hover:bg-green-500 text-white rounded px-36 py-2" type="submit" value="Submit" />
+                <input
+                  className="submitBtn bg-green-700 hover:bg-green-500 text-white rounded px-36 py-2"
+                  type="submit"
+                  value="Submit"
+                />
               </div>
             </div>
           </form>
